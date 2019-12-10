@@ -1,0 +1,10 @@
+dist: bionic
+language: c
+os: linux
+compiler:
+- gcc
+script: 
+- cd client/c
+- ./bootstrap.sh
+- ./configure
+- make
