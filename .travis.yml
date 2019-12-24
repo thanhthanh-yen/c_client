@@ -15,4 +15,5 @@ script:
 - ./bootstrap.sh
 - ./configure
 - make
+- cd ~/
 - ./travis-script/test_c_client.sh
