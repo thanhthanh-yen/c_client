@@ -8,7 +8,7 @@ sudo dpkg -i griddb-nosql_4.3_amd64.deb
 
 # Start server
 cd /usr/griddb-4.3/bin 
-gs_passwd admin -p admin
+sudo gs_passwd admin -p admin
 sed -i 's/"clusterName":""/"clusterName":"griddbcentos"/g' conf/gs_cluster.json
 export no_proxy=127.0.0.1
 gs_startnode -u admin/admin -w
