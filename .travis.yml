@@ -1,10 +1,14 @@
+sudo: required
 dist: bionic
-language: c
+language: cpp
 os: linux
-compiler:
-- gcc
+compiler: g++
+install:
+- sudo apt-get install gcc-4.8
+- sudo apt-get install g++-4.8
 script: 
 - cd client/c
 - ./bootstrap.sh
 - ./configure
 - make
+- ./travis-script/test_c_client.sh
