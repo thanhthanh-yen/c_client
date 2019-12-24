@@ -1,6 +1,6 @@
 #!/bin/sh -xe
-export GS_HOME=$PWD
-export GS_LOG=$PWD/log
+export GS_HOME=$/var/lib/gridstore
+export GS_LOG=$/var/lib/gridstore/log
 
 # Install GridDB sever
 wget https://github.com/griddb/griddb_nosql/releases/download/v4.3.0/griddb-nosql_4.3_amd64.deb
