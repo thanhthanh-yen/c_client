@@ -7,9 +7,8 @@ wget https://github.com/griddb/griddb_nosql/releases/download/v4.3.0/griddb-nosq
 sudo dpkg -i griddb-nosql_4.3_amd64.deb
 
 # Start server
-su gsadm -l
-gs_passwd admin
-sed -i 's/"clusterName":""/"clusterName":"griddbcentos"/g' conf/gs_cluster.json
+su - gsadm -c "gs_passwd admin"
+su - gsadm -c "sed -i 's/"clusterName":""/"clusterName":"griddbcentos"/g' conf/gs_cluster.json"
 export no_proxy=127.0.0.1
 gs_startnode -u admin/admin -w
 gs_joincluster -c griddbcentos -u admin/admin
