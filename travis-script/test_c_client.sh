@@ -8,21 +8,20 @@ export GS_HOME=/var/lib/gridstore
 export GS_LOG=/var/lib/gridstore/log
 
 # Start server
-sudo su gsadm -l 
-su -c "gs_passwd admin -p admin"
-sed -i 's/"clusterName":""/"clusterName":"griddbcentos"/g' $GS_HOME/conf/gs_cluster.json
-export no_proxy=127.0.0.1
-gs_startnode -u admin/admin -w
-sleep 10
-gs_joincluster -c griddbcentos -u admin/admin
-
-#sudo -u gsadm bash -c "gs_passwd admin -p admin"
-#sudo -u gsadm bash -c "sed -i 's/"clusterName":""/"clusterName":"griddbcentos"/g' $GS_HOME/conf/gs_cluster.json"
+#sudo su gsadm -l 
+#su -c "gs_passwd admin -p admin"
+#sed -i 's/"clusterName":""/"clusterName":"griddbcentos"/g' $GS_HOME/conf/gs_cluster.json
 #export no_proxy=127.0.0.1
-#sudo -H -u gsadm bash -c "gs_startnode -u admin/admin -w && find . -type f -name *.log"
+#gs_startnode -u admin/admin -w
 #sleep 10
-#sudo -H -u gsadm bash -c "gs_joincluster -c griddbcentos -u admin/admin
-"
+#gs_joincluster -c griddbcentos -u admin/admin
+
+sudo -u gsadm bash -c "gs_passwd admin -p admin"
+sudo -u gsadm bash -c "sed -i 's/"clusterName":""/"clusterName":"griddbcentos"/g' $GS_HOME/conf/gs_cluster.json"
+export no_proxy=127.0.0.1
+sudo -l -u gsadm bash -c "gs_startnode -u admin/admin -w && find . -type f -name *.log"
+sleep 10
+sudo -H -u gsadm bash -c "gs_joincluster -c griddbcentos -u admin/admin"
 
 # run sample
 cp client/c/sample/sample1.c .
