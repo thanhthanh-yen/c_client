@@ -8,7 +8,7 @@ export GS_HOME=/var/lib/gridstore
 export GS_LOG=/var/lib/gridstore/log
 
 # Start server
-sudo su gsadm -l
+sudo su gsadm -l && gs_passwd admin -p admin
 gs_passwd admin -p admin
 sed -i 's/"clusterName":""/"clusterName":"griddbcentos"/g' $GS_HOME/conf/gs_cluster.json
 export no_proxy=127.0.0.1
