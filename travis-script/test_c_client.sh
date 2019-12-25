@@ -15,6 +15,7 @@ sleep 10
 
 # run sample
 cp client/c/sample/sample1.c .
+gcc --version
 gcc -I./client/c/include -L./bin sample1.c -lgridstore
 ls
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:./bin
