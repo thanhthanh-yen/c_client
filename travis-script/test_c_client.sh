@@ -20,4 +20,4 @@ gcc-4.8 -I./client/c/include -L./bin sample1.c -lgridstore
 ls
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:./bin
 ./a.out 239.0.0.1 31999 griddbcentos admin admin
-
+echo "here"
