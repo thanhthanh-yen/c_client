@@ -13,6 +13,7 @@ sleep 10
 sudo -l -u gsadm bash -c "gs_joincluster -c griddbcentos -u admin/admin"
 
 # run sample
+ls
 cp client/c/sample/sample1.c .
 gcc -I./client/c/include -L./bin sample1.c -lgridstore
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:./bin
