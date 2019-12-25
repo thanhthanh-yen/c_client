@@ -13,6 +13,7 @@ sudo -u gsadm bash -c "sed -i 's/"clusterName":""/"clusterName":"griddbcentos"/g
 export no_proxy=127.0.0.1
 sudo -H -u gsadm bash -c "gs_startnode -u admin/admin -w"
 sleep 10
+find . -type f -name "*.log"
 sudo -H -u gsadm bash -c "gs_joincluster -c griddbcentos -u admin/admin"
 
 # run sample
