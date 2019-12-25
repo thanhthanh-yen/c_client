@@ -1,10 +1,11 @@
 #!/bin/sh -xe
-export GS_HOME=/var/lib/gridstore
-export GS_LOG=/var/lib/gridstore/log
 
 # Install GridDB sever
 wget https://github.com/griddb/griddb_nosql/releases/download/v4.3.0/griddb-nosql_4.3_amd64.deb
 sudo dpkg -i griddb-nosql_4.3_amd64.deb
+
+export GS_HOME=/var/lib/gridstore
+export GS_LOG=/var/lib/gridstore/log
 
 # Start server
 sudo -u gsadm bash -c "gs_passwd admin -p admin"
