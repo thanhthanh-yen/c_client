@@ -10,7 +10,6 @@ sudo su - gsadm -c "gs_passwd admin -p admin"
 sudo sed -i 's/"clusterName":""/"clusterName":"griddbubuntu"/g' /var/lib/gridstore/conf/gs_cluster.json
 sudo su - gsadm -c "export no_proxy=127.0.0.1"
 sudo su - gsadm -c "gs_startnode -u admin/admin -w"
-sudo su - gsadm -c "sleep 5"
 sudo su - gsadm -c "gs_joincluster -c griddbubuntu -u admin/admin"
 
 # run sample
@@ -19,6 +18,4 @@ gcc --version
 gcc-4.8 -I./client/c/include -L./bin sample1.c -l gridstore
 ls
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:./bin
-sleep 5
 ./a.out 239.0.0.1 31999 griddbubuntu admin admin
-echo "here"
