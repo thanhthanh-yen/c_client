@@ -7,9 +7,9 @@ sudo dpkg -i griddb-nosql_4.3_amd64.deb
 # Start server
 sudo -l -u gsadm bash -c "gs_passwd admin -p admin"
 sudo -l -u gsadm bash -c "sed -i 's/"clusterName":""/"clusterName":"griddbubuntu"/g' conf/gs_cluster.json"
-export no_proxy=127.0.0.1
+sudo -l -u gsadm bash -c "export no_proxy=127.0.0.1"
 sudo -l -u gsadm bash -c "gs_startnode -u admin/admin -w"
-sleep 5
+sudo -l -u gsadm bash -c "sleep 5"
 sudo -l -u gsadm bash -c "gs_joincluster -c griddbubuntu -u admin/admin"
 
 # run sample
