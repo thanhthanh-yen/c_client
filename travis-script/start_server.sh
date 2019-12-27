@@ -1,11 +1,13 @@
 #!/bin/sh -xe
-export GS_HOME=$PWD
-export GS_LOG=$PWD/log
+# Install GridDB sever
+wget https://github.com/griddb/griddb_nosql/releases/download/v4.3.0/griddb-nosql_4.3_amd64.deb
+sudo dpkg -i griddb-nosql_4.3_amd64.deb
 
-bin/gs_passwd admin -p admin
-sed -i 's/"clusterName":""/"clusterName":"griddbcentos"/g' conf/gs_cluster.json
-export no_proxy=127.0.0.1
-bin/gs_startnode -u admin/admin -w
-bin/gs_joincluster -c griddbcentos -u admin/admin
+# Start server
+sudo su - gsadm -c "gs_passwd admin -p admin"
+sudo su - gsadm -c "sed -i 's/\"clusterName\":\"\"/\"clusterName\":\"griddbubuntu\"/g' conf/gs_cluster.json"
+sudo su - gsadm -c "export no_proxy=127.0.0.1"
+sudo su - gsadm -c "gs_startnode -u admin/admin -w"
+sudo su - gsadm -c "gs_joincluster -c griddbubuntu -u admin/admin"
 
 
