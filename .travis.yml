@@ -6,7 +6,8 @@ compiler: g++
 install:
 - sudo apt-get install gcc-4.8
 - sudo apt-get install g++-4.8
+before_script:
+- ./travis-script/start_server.sh
 script: 
 - ./travis-script/build_c_client.sh
-- ./travis-script/start_server.sh
 - ./travis-script/test_c_client.sh
