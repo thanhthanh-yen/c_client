@@ -1,0 +1,5 @@
+cd client
+cd c
+./bootstrap.sh
+./configure
+make
