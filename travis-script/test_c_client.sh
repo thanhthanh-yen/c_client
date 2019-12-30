@@ -1,5 +1,4 @@
 #!/bin/sh -xe
-
 # run sample
 cp client/c/sample/sample1.c .
 gcc-4.8 -I./client/c/include -L./bin sample1.c -l gridstore
