@@ -11,3 +11,4 @@ before_script:
 script: 
 - ./travis-script/build_c_client.sh
 - ./travis-script/test_c_client.sh
+- ./travis-script/stop_server.sh
