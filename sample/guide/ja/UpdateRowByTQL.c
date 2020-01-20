@@ -51,7 +51,7 @@ void main(int argc, char *argv[]){
 		{ "database", "public" },
 		{ "user", "admin" },
 		{ "password", "admin" },
-		{ "applicationName", "SampleC" }
+		//{ "applicationName", "SampleC" }
 	};	
 	/*
 	// 接続情報を指定する (固定リスト方式)
