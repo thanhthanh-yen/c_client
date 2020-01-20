@@ -10,7 +10,6 @@ before_script:
 - ./travis-script/start_server.sh
 script: 
 - ./travis-script/build_c_client.sh
-- ./travis-script/test_c_client.sh
 - chmod +x ./travis-script/run_sample.sh
 - ./travis-script/run_sample.sh
 - ./travis-script/stop_server.sh
