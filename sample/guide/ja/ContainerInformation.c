@@ -36,7 +36,7 @@ void main(int argc, char *argv[]){
 		{ "database", "public" },
 		{ "user", "admin" },
 		{ "password", "admin" },
-		//{ "applicationName", "SampleC" }
+	//{ "applicationName", "SampleC" }
 	};		
 
 	/*
