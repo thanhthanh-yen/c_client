@@ -1,4 +1,4 @@
-#!/bin/sh -xe
+#!/bin/sh -x
 # Install GridDB sever
 wget https://github.com/griddb/griddb_nosql/releases/download/v4.3.0/griddb-nosql_4.3_amd64.deb
 sudo dpkg -i griddb-nosql_4.3_amd64.deb
