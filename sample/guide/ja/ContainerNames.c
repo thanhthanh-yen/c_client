@@ -24,7 +24,7 @@ void main(int argc, char *argv[]){
 		{ "database", "public" },
 		{ "user", "admin" },
 		{ "password", "admin" },
-		{ "applicationName", "SampleC" }
+		//{ "applicationName", "SampleC" }
 	};
 	
 	const size_t propCount = sizeof(props) / sizeof(*props);
