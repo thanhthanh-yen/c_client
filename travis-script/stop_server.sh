@@ -1,4 +1,4 @@
-#!/bin/sh -xe
+#!/bin/sh -x
 
 export GS_HOME=$PWD
 export GS_LOG=$PWD/log
