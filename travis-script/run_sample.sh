@@ -2,7 +2,7 @@
 
 cp sample/guide/ja/* .
 
-gcc-4.8 -I./client/c/include -L./bin -o ArrayData ArrayData.c -l gridstore 
+gcc-4.8 -I./client/c/include -L./bin ArrayData.c -l gridstore -o ArrayData
 gcc-4.8 -I./client/c/include -L./bin BlobData.c -l gridstore -o BlobData
 gcc-4.8 -I./client/c/include -L./bin Connect.c -l gridstore -o Connect
 gcc-4.8 -I./client/c/include -L./bin ContainerInformation.c -l gridstore -o ContainerInformation
@@ -26,20 +26,20 @@ ls
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:./bin
 
 ./ArrayData 239.0.0.1 31999 griddbubuntu admin admin
-./BlobData.out 239.0.0.1 31999 griddbubuntu admin admin
-./Connect.out 239.0.0.1 31999 griddbubuntu admin admin
-./ContainerInformation.out 239.0.0.1 31999 griddbubuntu admin admin
-./ContainerNames.out 239.0.0.1 31999 griddbubuntu admin admin
-./CreateCollectionByMethod.out 239.0.0.1 31999 griddbubuntu admin admin
-./CreateIndex.out 239.0.0.1 31999 griddbubuntu admin admin
-./CreateTimeSeriesByMethod.out 239.0.0.1 31999 griddbubuntu admin admin
-./GetRow.out 239.0.0.1 31999 griddbubuntu admin admin
-./PutRow.out 239.0.0.1 31999 griddbubuntu admin admin
-./PutRows.out 239.0.0.1 31999 griddbubuntu admin admin
-./RemoveRowByRowkey.out 239.0.0.1 31999 griddbubuntu admin admin
-./RemoveRowByTQL.out 239.0.0.1 31999 griddbubuntu admin admin
-./TimeSeriesCompression.out 239.0.0.1 31999 griddbubuntu admin admin
-./TQLAggregation.out 239.0.0.1 31999 griddbubuntu admin admin
-./TQLSelect.out 239.0.0.1 31999 griddbubuntu admin admin
-./TQLTimeseries.out 239.0.0.1 31999 griddbubuntu admin admin
-./UpdateRowByTQL.out 239.0.0.1 31999 griddbubuntu admin admin
+./BlobData 239.0.0.1 31999 griddbubuntu admin admin
+./Connect 239.0.0.1 31999 griddbubuntu admin admin
+./ContainerInformation 239.0.0.1 31999 griddbubuntu admin admin
+./ContainerNames 239.0.0.1 31999 griddbubuntu admin admin
+./CreateCollectionByMethod 239.0.0.1 31999 griddbubuntu admin admin
+./CreateIndex 239.0.0.1 31999 griddbubuntu admin admin
+./CreateTimeSeriesByMethod 239.0.0.1 31999 griddbubuntu admin admin
+./GetRow 239.0.0.1 31999 griddbubuntu admin admin
+./PutRow 239.0.0.1 31999 griddbubuntu admin admin
+./PutRows 239.0.0.1 31999 griddbubuntu admin admin
+./RemoveRowByRowkey 239.0.0.1 31999 griddbubuntu admin admin
+./RemoveRowByTQL 239.0.0.1 31999 griddbubuntu admin admin
+./TimeSeriesCompression 239.0.0.1 31999 griddbubuntu admin admin
+./TQLAggregation 239.0.0.1 31999 griddbubuntu admin admin
+./TQLSelect 239.0.0.1 31999 griddbubuntu admin admin
+./TQLTimeseries 239.0.0.1 31999 griddbubuntu admin admin
+./UpdateRowByTQL 239.0.0.1 31999 griddbubuntu admin admin
