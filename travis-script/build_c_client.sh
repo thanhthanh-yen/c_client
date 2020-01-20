@@ -1,4 +1,4 @@
-#!/bin/sh -xe
+#!/bin/sh -x
 export CC=gcc-4.8
 export CC_FOR_BUILD=gcc-4.8
 export CXX=g++-4.8
