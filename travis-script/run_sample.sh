@@ -25,7 +25,7 @@ ls
 
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:./bin
 
-./ArrayData.out 239.0.0.1 31999 griddbubuntu admin admin
+./ArrayData 239.0.0.1 31999 griddbubuntu admin admin
 ./BlobData.out 239.0.0.1 31999 griddbubuntu admin admin
 ./Connect.out 239.0.0.1 31999 griddbubuntu admin admin
 ./ContainerInformation.out 239.0.0.1 31999 griddbubuntu admin admin
