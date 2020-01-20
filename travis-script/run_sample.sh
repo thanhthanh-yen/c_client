@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -x
 
 cp sample/guide/ja/* .
 
