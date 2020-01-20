@@ -21,6 +21,8 @@ gcc-4.8 -I./client/c/include -L./bin TQLSelect.c -l gridstore -o TQLSelect
 gcc-4.8 -I./client/c/include -L./bin TQLTimeseries.c -l gridstore -o TQLTimeseries
 gcc-4.8 -I./client/c/include -L./bin UpdateRowByTQL.c -l gridstore -o UpdateRowByTQL
 
+ls
+
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:./bin
 
 ./ArrayData.out 239.0.0.1 31999 griddbubuntu admin admin
