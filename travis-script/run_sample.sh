@@ -5,7 +5,7 @@ cp sample/guide/ja/* .
 gcc-4.8 -I./client/c/include -L./bin ArrayData.c -l gridstore -o ArrayData
 gcc-4.8 -I./client/c/include -L./bin BlobData.c -l gridstore -o BlobData
 gcc-4.8 -I./client/c/include -L./bin Connect.c -l gridstore -o Connect
-gcc-4.8 -I./client/c/include -L./bin ContainerInformation.c.c -l gridstore -o ContainerInformation
+gcc-4.8 -I./client/c/include -L./bin ContainerInformation.c -l gridstore -o ContainerInformation
 gcc-4.8 -I./client/c/include -L./bin ContainerNames.c -l gridstore -o ContainerNames
 gcc-4.8 -I./client/c/include -L./bin CreateCollectionByMethod.c -l gridstore -o CreateCollectionByMethod
 gcc-4.8 -I./client/c/include -L./bin CreateIndex.c -l gridstore -o CreateIndex
